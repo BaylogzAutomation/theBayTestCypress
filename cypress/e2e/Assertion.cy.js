@@ -10,8 +10,8 @@ describe('LOGIN', () => {
       cy.contains('AAA').should('be.visible')
       cy.get('.inventory_list').should('exist')
       cy.get('.inventory_item').should('have.length.lessThan', 7).and('exist').and('not.be.empty')
-      
-
 
     })
   })
+
+  

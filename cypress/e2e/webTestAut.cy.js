@@ -7,13 +7,12 @@ describe('LOGIN', () => {
       cy.wait(5000)
       cy.get('[data-test="password"]').should('be.visible').type('secret_sauce')
       cy.wait(10000)
+      cy.screenshot()
       cy.get('[data-test="login-button"]').should('be.visible').click()
       cy.contains('Backpack').should('be.visible').and('not.be.empty')
       cy.contains('AAA').should('be.visible')
       cy.get('.inventory_list').should('exist')
       cy.get('.inventory_item').should('have.length.lessThan', 7).and('exist').and('not.be.empty')
-      
-
-
+      cy.screenshot()
     })
   })
